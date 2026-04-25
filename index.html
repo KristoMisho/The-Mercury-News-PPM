@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Mercury News </title>
+  <link rel="stylesheet" href=" css.css"  />
+</head>
+<body>
+<!-- HEADER -->
+<header class="site-header">
+  <!-- NAVBAR RIDOTTA CHE COMPARE QUANDO SCORRI IN GIU IL SITO-->
+  <div class="sticky-nav" id="stickyNav" aria-hidden="true">
+    <div class="sticky-nav-inner">
+      <div class="sticky-nav-left">
+        <button class="hamburger-btn sticky-hamburger" aria-label="All sections">
+          <svg width="15" height="12" viewBox="0 0 15 12" fill="none" aria-hidden="true">
+            <rect y="0"  width="15" height="2" fill="currentColor"/>
+            <rect y="5"  width="15" height="2" fill="currentColor"/>
+            <rect y="10" width="15" height="2" fill="currentColor"/>
+          </svg>
+          All Sections
+          </button>
+      </div>
+      <div class="sticky-nav-center">
+        <a href="#" class="logo-text sticky-logo" aria-label="The Mercury News — homepage">The Mercury News</a>
+      </div>
+      <div class="sticky-nav-right">
+        <button class="btn-user-mobile" aria-label="Account">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="7" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </button>
+        <button class="search-btn" aria-label="Search">
+        <a href="#" class="btn-subscribe">Subscribe</a>
+        <a href="#" class="btn-login">Log in</a>
+        </button>
+        <button class="search-btn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"/>
+            <line x1="16.5" y1="16.5" x2="22" y2="22"/>
+          </svg>
+        </button>
+      </div>
+     </div>
+  </div>
+
+
+  <!-- RIGA 1: POSIZIONAMENTO A SINISTRA DEL HAMBURGER (ALL SECTION)  E POSIZIONAMENTO A DESTRA DEI BOTTONI -->
+  <div class="site-header-top">
+    <div class="header-left">
+      <button class="hamburger-btn" id="navToggle" aria-label="All sections" aria-expanded="false" aria-controls="mainNavList">
+        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" aria-hidden="true">
+          <rect y="0"  width="15" height="2" fill="currentColor"/>
+          <rect y="5"  width="15" height="2" fill="currentColor"/>
+          <rect y="10" width="15" height="2" fill="currentColor"/>
+        </svg>
+        All Sections
+      </button>
+    </div>
+    <div class="header-right">
+      <a href="#" class="btn-subscribe">Subscribe</a>
+      <a href="#" class="btn-login">Log in</a>
+      <button class="btn-user-mobile" aria-label="Account">
+
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="7" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </button>
+
+      <button class="search-btn" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/>
+          <line x1="16.5" y1="16.5" x2="22" y2="22"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- RIGA 2: METEO E DATA A SINISTRA E LOGO CENTRALE-->
+  <div class="site-header-mid">
+    <div class="header-left-mid">
+      <div class="weather-block">
+        <svg width="16" height="13" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+          <ellipse cx="8"  cy="9"  rx="7" ry="5"  fill="#ccc"/>
+          <ellipse cx="14" cy="10" rx="5" ry="4"  fill="#ddd"/>
+          <ellipse cx="8"  cy="7"  rx="5" ry="5"  fill="#bbb"/>
+        </svg>
+        <span class="temp">71°F</span>
+        <span class="sep"></span>
+        <span class="date-str">Friday, April 17th 2026</span>
+      </div>
+      <span class="edition">Today's e-Edition</span>
+    </div>
+    <div class="header-center">
+      <a href="#" class="logo-text" aria-label="The Mercury News — homepage">The Mercury News</a>
+    </div>
+    <!-- spazio bilanciato a destra per centrare il logo -->
+    <div style="min-width:160px;"></div>
+  </div>
+
+</header>
+
+<!-- Logo bar solo mobile -->
+<div class="mobile-logo-bar" style="display:none">
+  <a href="#" class="logo-text">The Mercury News</a>
+</div>
+
+<!--MAIN NAV  -->
+<nav class="main-nav" aria-label="Main navigation">
+  <div class="nav-mobile-toggle">
+    <button id="navToggleMobile" aria-expanded="false" aria-controls="mainNavList">☰&nbsp;Sections</button>
+    <button class="search-btn" aria-label="Search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+    </button>
+  </div>
+  <ul class="nav-list" id="mainNavList" role="list">
+    <li><a href="#">News</a></li>
+    <li><a href="#">Local</a></li>
+    <li><a href="#">Sports</a></li>
+    <li><a href="#">Obituaries</a></li>
+    <li><a href="#">Things to Do</a></li>
+    <li><a href="#">Business</a></li>
+    <li><a href="#">Real Estate</a></li>
+    <li><a href="#">Opinion</a></li>
+    <li><a href="#">Marketplace</a></li>
+    <li><a href="#">e-Edition</a></li>
+  </ul>
+</nav>
+
+<!-- TRENDING BAR -->
+<div class="trending-bar" role="navigation" aria-label="Trending topics">
+  <span class="trending-label">TRENDING:</span>
+  <nav class="trending-links">
+    <a href="#">Dolor sit amet consecte</a>
+    <a href="#">Lorem ipsum magna ali</a>
+    <a href="#">Sed do eiusmod tempo</a>
+    <a href="#">Ut labore et dolore </a>
+    <a href="#">Quis nostrud exercitat</a>
+    <a href="#">Nemo enim ipsam </a>
+  </nav>
+</div>
+
+<!-- AD  -->
+<div class="ad-slot leaderboard" role="presentation" aria-hidden="true"></div>
+
+
+<!-- CONTENUTO PRINCIPALE -->
+<main id="main-content">
+  <div class="page-body">
+
+    <!--LAYOUT NOTIZIA PRINCIPALE : COMPOSIZIONE DELLE 3 COLONNE E LE DUE RIGHE -->
+    <div class="hero-layout">
+
+      <div class="hero-main">
+
+        <!-- ── ROW 1: TESTO A SX + PLACEHOLDER PRINCIPALE ── -->
+        <div class="hero-top-row">
+
+          <div class="hero-text-col">
+            <h1><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt</a></h1>
+            <p class="deck">'Lorem ipsum dolor,' one Democrat candidate said about past donations consectetur adipiscing.</p>
+
+          </div>
+
+          <div class="hero-photo-col" data-deck="'Lorem ipsum dolor,' one Democrat candidate said about past donations consectetur adipiscing.">
+            <div class="hero-photo ph" role="img" aria-label="Placeholder foto principale">
+              <img src="https://placehold.co/358x215/999/fff" alt=""/>
+
+            </div>
+          </div>
+
+        </div><!-- /hero-top-row -->
+
+        <!-- ── ROW 2: GRIGILIA DUE COLONNE + FOTO ── -->
+        <div class="hero-bottom-grid">
+
+          <article class="hero-grid-article">
+            <div class="hero-grid-photo ph">
+              <img src="https://placehold.co/430x260/999/fff?" alt=""/>
+            </div>
+            <h2><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</a></h2>
+          </article>
+
+          <article class="hero-grid-article">
+            <div class="hero-grid-photo ph">
+              <img src="https://placehold.co/430x260/aaa/fff?" alt=""/>
+            </div>
+            <h3><a href="#">Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi aliquip commodo consequat</a></h3>
+          </article>
+
+          <article class="hero-grid-article">
+            <div class="hero-grid-photo ph">
+              <img src="https://placehold.co/430x260/888/fff?" alt=""/>
+            </div>
+            <h3><a href="#">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim</a></h3>
+          </article>
+
+          <article class="hero-grid-article">
+            <div class="hero-grid-photo ph">
+              <img src="https://placehold.co/430x260/bbb/fff?" alt=""/>
+            </div>
+            <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</a></h3>
+          </article>
+
+        </div><!-- /hero-bottom-grid -->
+
+        <!-- AD -->
+
+
+        <!-- SEZIONE :RECOMMENDED FOR YOU -->
+        <section class="recommended-section" aria-label="Recommended for you">
+          <h2 class="sec-hdr"> <span class= titolo> Recommended For You</span>  </h2>
+          <div class="rec-grid">
+            <div class="rec-item"><span class="rec-num">1</span><h3><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h3></div>
+            <div class="rec-item"><span class="rec-num">2</span><h4><a href="#">Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi aliquip</a></h4></div>
+            <div class="rec-item"><span class="rec-num">3</span><h4><a href="#">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</a></h4></div>
+            <div class="rec-item"><span class="rec-num">4</span><h4><a href="#">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt</a></h4></div>
+            <div class="rec-item"><span class="rec-num">5</span><h4><a href="#">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</a></h4></div>
+            <div class="rec-item"><span class="rec-num">6</span><h4><a href="#">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed</a></h4></div>
+            <div class="rec-item"><span class="rec-num">7</span><h4><a href="#">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipiscing</a></h4></div>
+            <div class="rec-item"><span class="rec-num">8</span><h4><a href="#">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam</a></h4></div>
+            <div class="rec-item"><span class="rec-num">9</span><h4><a href="#">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</a></h4></div>
+            <div class="rec-item"><span class="rec-num">10</span><h4><a href="#">Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo</a></h4></div>
+          </div>
+        </section>
+
+
+
+      </div>
+
+      <!-- ── ASIDE: LATEST HEADLINES-->
+      <aside class="hero-aside" aria-label="Latest headlines">
+        <h2>LATEST HEADLINES</h2>
+        <div class="headline-item"><h3><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</a></h3><p class="meta">4 hours ago</p></div>
+        <div class="headline-item"><h3><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</a></h3><p class="meta">8 hours ago</p></div>
+        <div class="headline-item"><h3><a href="#">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipiscing</a></h3><p class="meta">13 minutes ago</p></div>
+        <div class="headline-item"><h3><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</a></h3><p class="meta">13 minutes ago</p></div>
+        <div class="headline-item"><h3><a href="#">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipiscing</a></h3><p class="meta">1 hour ago</p></div>
+        <div class="headline-item"><h3><a href="#">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipiscing</a></h3><p class="meta">2 hours ago</p></div>
+        <div class="headline-item"><h3><a href="#">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipiscing</a></h3><p class="meta">1 hour ago</p></div>
+
+        <div class="newsletter-widget">
+          <p>Get Morning Report and other email newsletters</p>
+          <a href="#" class="signup-btn">SIGN UP</a>
+        </div>
+
+
+      </aside>
+
+    </div><!-- /hero-layout -->
+
+    <!-- SEZIONE 3 COLONNE AFFIANCATE: CRIME, SPORT REAL ESTATE -->
+    <div class="three-col-sections" aria-label="News sections">
+
+      <!-- CRIME AND PUBLIC SAFETY -->
+      <section class="col-section" aria-label="Crime and Public Safety">
+        <h2 class="sec-hdr"><a href="#">Crime And Public Safety </a> <span class="arrow">›</span></h2>
+        <div class="col-photo ph"><img src="https://placehold.co/285x185/aaa/fff?" alt="San Francisco hit-and-run investigation"/></div>
+        <h3 class="col-lead-title"><a href="#">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet </a></h3>
+        <p class="col-deck">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.</p>
+        <hr class="col-divider"/>
+        <div class="col-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</a></h4></div>
+        <div class="col-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</a></h4></div>
+        <div class="col-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</a></h4></div>
+        <div class="col-link-item"><h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+      </section>
+
+      <!-- SPORTS -->
+      <section class="col-section" aria-label="Sports">
+        <h2 class="sec-hdr"> <a href="#">Sports </a> <span class="arrow">›</span></h2>
+        <div class="col-photo ph"><img src="https://placehold.co/285x185/999/fff?" alt="AEW x NJPW Forbidden Door"/></div>
+        <h3 class="col-lead-title"><a href="#">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipiscing</a></h3>
+        <p class="col-deck">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</p>
+        <hr class="col-divider"/>
+        <div class="col-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</a></h4></div>
+        <div class="col-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</a></h4></div>
+        <div class="col-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</a></h4></div>
+        <div class="col-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+      </section>
+
+      <!-- REAL ESTATE -->
+      <section class="col-section" aria-label="Real Estate">
+        <h2 class="sec-hdr"><a href="#">Real Estate</a>  <span class="arrow">›</span></h2>
+        <div class="col-photo ph"><img src="https://placehold.co/285x185/aaa/fff?" alt="Walnut Creek sports bar"/></div>
+        <h3 class="col-lead-title"><a href="#">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipiscing</a></h3>
+        <p class="col-deck">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</p>
+        <hr class="col-divider"/>
+        <div class="col-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</a></h4></div>
+        <div class="col-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</a></h4></div>
+        <div class="col-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</a></h4></div>
+        <div class="col-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore</a></h4></div>
+      </section>
+
+    </div>
+
+    <!-- SEZIONE :PHOTOS -->
+    <section class="photos-section" aria-label="Photos">
+      <h2 class="sec-hdr"><a class="title2">Photos</a> <span class="arrow">›</span></h2>
+      <div class="photos-grid">
+        <div class="photo-featured">
+          <div class="feat-img ph"><img src="https://placehold.co/400x210/888/fff?" alt="Cheap Trick returns to Budokan"/></div>
+          <h3><a href="#">Lorem ipsum dolor sit amet: Vide novum carmen musicae hic nunc.</a></h3>
+          <p class="deck">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        </div>
+        <div class="photo-list">
+          <div class="photo-thumb-item"><div class="thumb ph"><img src="https://placehold.co/62x47/aaa/fff?" alt=""/></div><h4><a href="#">Lorem ipsum: Cicero coniungit libertatem et virtutem durante magno .</a></h4></div>
+          <div class="photo-thumb-item"><div class="thumb ph"><img src="https://placehold.co/62x47/aaa/fff?" alt=""/></div><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod eid</a></h4></div>
+          <div class="photo-thumb-item"><div class="thumb ph"><img src="https://placehold.co/62x47/aaa/fff?" alt=""/></div><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod </a></h4></div>
+          <div class="photo-thumb-item"><div class="thumb ph"><img src="https://placehold.co/62x47/aaa/fff?" alt=""/></div><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do elit</a></h4></div>
+          <div class="photo-thumb-item"><div class="thumb ph"><img src="https://placehold.co/62x47/aaa/fff?" alt=""/></div><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do </a></h4></div>
+          <div class="photo-thumb-item"><div class="thumb ph"><img src="https://placehold.co/62x47/aaa/fff?" alt=""/></div><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed </a></h4></div>
+        </div>
+      </div>
+      <div class="show-more-photos"><a href="#">Show More Photos</a></div>
+
+    </section>
+
+    <!-- SEZIONE :THINGS TO DO -->
+    <section class="thumb-section" aria-label="Things to Do">
+      <h2 class="sec-hdr">Things To Do <span class="arrow">›</span></h2>
+      <div class="thumb-section-content">
+        <div class="thumb-featured">
+          <div class="thumb-img ph"><img src="https://placehold.co/88x88/aaa/fff?" alt=""/></div>
+          <div class="thumb-featured-text">
+            <h3 class="thumb-lead-title"><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit </a></h3>
+            <p class="thumb-deck">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.</p>
+          </div>
+        </div>
+        <div class="thumb-links">
+          <div class="thumb-link-item"><h4><a href="#">'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+        </div>
+      </div>
+    </section>
+
+    <!--  SEZIONE: RESTAURANTS, FOOD AND DRINK -->
+    <section class="thumb-section" aria-label="Restaurants, Food and Drink">
+      <h2 class="sec-hdr">Restaurants, Food And Drink <span class="arrow">›</span></h2>
+      <div class="thumb-section-content">
+        <div class="thumb-featured">
+          <div class="thumb-img ph"><img src="https://placehold.co/88x88/bbb/fff?" alt=""/></div>
+          <div class="thumb-featured-text">
+            <h3 class="thumb-lead-title"><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do</a></h3>
+            <p class="thumb-deck">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.</p>
+          </div>
+        </div>
+        <div class="thumb-links">
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incid</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE :OPINION -->
+    <section class="thumb-section" aria-label="Opinion">
+      <h2 class="sec-hdr">Opinion <span class="arrow">›</span></h2>
+      <div class="thumb-section-content">
+        <div class="thumb-featured">
+          <div class="thumb-img ph"><img src="https://placehold.co/88x88/aaa/fff?" alt=""/></div>
+          <div class="thumb-featured-text">
+            <h3 class="thumb-lead-title"><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h3>
+            <p class="thumb-deck">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do </p>
+          </div>
+        </div>
+        <div class="thumb-links">
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod </a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor morem</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUSINESS -->
+    <section class="thumb-section" aria-label="Business">
+      <h2 class="sec-hdr">Business <span class="arrow">›</span></h2>
+      <div class="thumb-section-content">
+        <div class="thumb-featured">
+          <div class="thumb-img ph"><img src="https://placehold.co/88x88/999/fff?" alt=""/></div>
+          <div class="thumb-featured-text">
+            <h3 class="thumb-lead-title"><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eius</a></h3>
+            <p class="thumb-deck">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor eiusmod</p>
+          </div>
+        </div>
+        <div class="thumb-links">
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CELEBRITIES -->
+    <section class="thumb-section" aria-label="Celebrities">
+      <h2 class="sec-hdr">Celebrities <span class="arrow">›</span></h2>
+      <div class="thumb-section-content">
+        <div class="thumb-featured">
+          <div class="thumb-img ph"><img src="https://placehold.co/88x88/aaa/fff?" alt=""/></div>
+          <div class="thumb-featured-text">
+            <h3 class="thumb-lead-title"><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod </a></h3>
+            <p class="thumb-deck">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor elit sed eiusmod consectetur amet elit.</p>
+          </div>
+        </div>
+        <div class="thumb-links">
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod </a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod eud</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOUSING -->
+    <section class="thumb-section" aria-label="Housing">
+      <h2 class="sec-hdr">Housing <span class="arrow">›</span></h2>
+      <div class="thumb-section-content">
+        <div class="thumb-featured">
+          <div class="thumb-img ph"><img src="https://placehold.co/88x88/aaa/fff?" alt=""/></div>
+          <div class="thumb-featured-text">
+            <h3 class="thumb-lead-title"><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eid</a></h3>
+            <p class="thumb-deck">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor elit sed to eid adipiscing</p>
+          </div>
+        </div>
+        <div class="thumb-links">
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor sit amet</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod </a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEST REVIEWS -->
+    <section class="thumb-section" aria-label="Best Reviews">
+      <h2 class="sec-hdr">Best Reviews <span class="arrow">›</span></h2>
+      <div class="thumb-section-content">
+        <div class="thumb-featured">
+          <div class="thumb-img ph"><img src="https://placehold.co/88x88/aaa/fff?" alt=""/></div>
+          <div class="thumb-featured-text">
+            <h3 class="thumb-lead-title"><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod</a></h3>
+            <p class="thumb-deck">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt...</p>
+          </div>
+        </div>
+        <div class="thumb-links">
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod </a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+          <div class="thumb-link-item"><h4><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor</a></h4></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPCOMING EVENTS -->
+    <section class="events-section events-carousel"aria-label="Upcoming events">
+      <h2 class="TITLE">Upcoming Events</h2>
+       <button class="events-arrow events-arrow--prev" aria-label="Previous events">&#8249;</button>
+      <div class="events-grid">
+
+        <div class="event-item"><div class="ev-img ph"><img src="https://placehold.co/120x70/ccc/fff?" alt=""/></div></div>
+        <div class="event-item"><div class="ev-img ph"><img src="https://placehold.co/120x70/ccc/fff?" alt=""/></div></div>
+        <div class="event-item"><div class="ev-img ph"><img src="https://placehold.co/120x70/ccc/fff?" alt=""/></div></div>
+        <div class="event-item"><div class="ev-img ph"><img src="https://placehold.co/120x70/ccc/fff?" alt=""/></div></div>
+        <div class="event-item"><div class="ev-img ph"><img src="https://placehold.co/120x70/ccc/fff?" alt=""/></div></div>
+        <div class="event-item"><div class="ev-img ph"><img src="https://placehold.co/120x70/ccc/fff?" alt=""/></div></div>
+
+      </div>
+    <div class="events-datebar">
+      <span class="events-datebar-cal">&#128197;</span>
+      <div class="events-datebar-days">
+        <span class="events-date-item">TUE<br>21</span>
+        <span class="events-date-item">WED<br>22</span>
+        <span class="events-date-item">THU<br>23</span>
+        <span class="events-date-item">FRI<br>24</span>
+        <span class="events-date-item">SAT<br>25</span>
+        <span class="events-date-item">SUN<br>26</span>
+        <span class="events-date-item">MON<br>27</span>
+        <span class="events-date-item">TUE<br>28</span>
+        <span class="events-date-item">WED<br>29</span>
+        <span class="events-date-item">THU<br>30</span>
+        <span class="events-date-item">FRI<br>1</span>
+        <span class="events-date-item">SAT<br>2</span>
+        <span class="events-date-item">SUN<br>3</span>
+        <span class="events-date-item">MON<br>4</span>
+        <span class="events-date-item">TUE<br>5</span>
+        <span class="events-date-item">WED<br>6</span>
+        <span class="events-date-item">THU<br>7</span>
+        <span class="events-date-item">FRI<br>8</span>
+      </div>
+    </div>
+
+
+
+
+    <button class="events-arrow events-arrow--next" aria-label="Next events">&#8250;</button>
+    </section>
+
+  </div><!-- /page-body -->
+</main>
+
+<!-- SEZIONE: FOOTER-->
+<footer aria-label="Site footer">
+  <div class="footer-inner">
+    <a href="#" class="footer-logo">The Mercury News</a>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <div class="footer-col-group">
+          <h3>NEWS ALERTS</h3>
+          <ul>
+            <li><a href="#">Email Newsletters</a></li>
+            <li><a href="#">Today's e-Edition</a></li>
+            <li><a href="#">Mobile Apps</a></li>
+            <li><a href="#">Site Map</a></li>
+          </ul>
+        </div>
+        <div class="footer-col-group" style="margin-top:18px;">
+          <h4>MARKETPLACE</h4>
+          <ul>
+            <li><a href="#">Place an Obituary</a></li>
+            <li><a href="#">Place a Real Estate Ad</a></li>
+            <li><a href="#">Lottery</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>CONTACT US</h4>
+        <ul>
+          <li><a href="#">Digital Access FAQ</a></li>
+          <li><a href="#">Join our Team</a></li>
+          <li><a href="#">Special Sections</a></li>
+          <li><a href="#">Sponsor a Group</a></li>
+          <li><a href="#">Get Sponsored Access</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>ADVERTISE WITH US</h4>
+        <ul>
+          <li><a href="#">Network Advertising</a></li>
+          <li><a href="#">Daily Ads</a></li>
+          <li><a href="#">Place a Legal Notice</a></li>
+          <li><a href="#">Public Notices</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SUBSCRIBE</h4>
+        <ul>
+          <li><a href="#">Member Services</a></li>
+          <li><a href="#">Manage Subscriptions</a></li>
+          <li><a href="#">The Mercury News Store</a></li>
+          <li><a href="#">Archive Search</a></li>
+          <li><a href="#">Reprints</a></li>
+        </ul>
+        <a href="#" class="linea"> SUBSCRIBE NOW</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-legal">
+    <nav class="footer-legal-links" aria-label="Legal links">
+      <a href="#">Terms of Use</a>
+      <a href="#">Cookie Policy</a>
+      <a href="#">Cookie Preferences</a>
+      <a href="#">California Notice at Collection</a>
+      <a href="#">Notice of Financial Incentive</a>
+      <a href="#">Do Not Sell/Share My Personal Information</a>
+      <a href="#">Arbitration</a>
+      <a href="#">Powered by WordPress.com VIP</a>
+    </nav>
+    <p class="footer-copyright">
+      Copyright 2026 The Mercury News. All rights reserved. The use of any content on this website for the purpose of training artificial intelligence systems, algorithms, machine learning models, text and data mining, or similar use is strictly prohibited without explicit written consent.
+    </p>
+    <div class="footer-brands" aria-label="Parent company logos">
+      <span class="brand-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="0" y="3" width="5" height="18" fill="#4a7fa5"/><rect x="7" y="0" width="17" height="9" fill="#4a7fa5"/><rect x="7" y="11" width="17" height="9" fill="#4a7fa5"/></svg>
+        <span style="display:flex;flex-direction:column;"><span>BayArea</span><span>NewsGroup</span></span>
+      </span>
+      <span class="brand-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 18 Q7 4 12 12 Q17 20 22 6" stroke="#4a7fa5" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M2 13 Q7 1 12 8 Q17 15 22 2" stroke="#4a7fa5" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+        <span style="display:flex;flex-direction:column;"><span>AMPLIFIED</span><span>CONTENT STUDIO</span></span>
+      </span>
+      <span class="brand-logo">
+        <svg width="65" height="60" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="5" width="22" height="2.5" fill="#4a7fa5"/><rect x="1" y="11" width="22" height="2.5" fill="#4a7fa5"/><rect x="1" y="17" width="22" height="2.5" fill="#4a7fa5"/></svg>
+        <span>MediaNews Group</span>
+      </span>
+    </div>
+  </div>
+</footer>
+<!-- JAVASCRIPT CHE MI PERMETTE DI INTEGRARE LE 3 FUNZIONI: APERTURA/CHIUSURA MENU NAVIGAZIONE, STICKY NAVBAR E LOGO MOBILE-->
+<script>
+  const navList = document.getElementById('mainNavList');
+  function setNav(open, btn) {
+    navList.classList.toggle('open', open);
+    if (btn) btn.setAttribute('aria-expanded', open);
+  }
+  document.getElementById('navToggle').addEventListener('click', function() { setNav(!navList.classList.contains('open'), this); });
+  document.getElementById('navToggleMobile').addEventListener('click', function() { setNav(!navList.classList.contains('open'), this); });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('nav.main-nav') && !e.target.closest('#navToggle'))
+      setNav(false, document.getElementById('navToggle'));
+  });
+
+  /* LOGO PER IL MOBILE */
+  function checkMobile() {
+    const bar = document.querySelector('.mobile-logo-bar');
+    bar.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+  }
+  checkMobile();
+  window.addEventListener('resize', checkMobile);
+
+  /* NAVBAR RIDOTTA CHE APPARE APPENA SCROLLI L'HEADER PRINCIPALE */
+  const stickyNav = document.getElementById('stickyNav');
+  const siteHeader = document.querySelector('.site-header');
+  function handleSticky() {
+    const threshold = siteHeader ? siteHeader.offsetHeight + 60 : 120;
+    if (window.scrollY > threshold) {
+      stickyNav.classList.add('visible');
+      stickyNav.setAttribute('aria-hidden', 'false');
+
+    } else {
+      stickyNav.classList.remove('visible');
+      stickyNav.setAttribute('aria-hidden', 'true');
+    }
+  }
+  window.addEventListener('scroll', handleSticky, { passive: true });
+</script>
+</body>
+</html>
