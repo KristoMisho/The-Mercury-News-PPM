@@ -2701,3 +2701,9 @@ footer {
     height: 40px;
   }
 }
+/* questo mi permette di aggiustare il logo quando scorri giu */
+@media (max-width: 480px) {
+  .sticky-nav .sticky-logo {
+    font-size: 26px;
+  }
+}
