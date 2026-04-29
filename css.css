@@ -2706,7 +2706,11 @@ footer {
   .sticky-nav .sticky-logo {
     font-size: 26px;
   }
-  .logo-text {
-    font-size: 22px;
+  .mobile-logo-bar .logo-text {
+    font-size: 26px;
+  }
+  .site-header-top .logo-text {
+    font-size: 24px;
+    word-spacing: -2px;
   }
 }
