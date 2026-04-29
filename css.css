@@ -2704,10 +2704,10 @@ footer {
 /* questo mi permette di aggiustare il logo quando scorri giu */
 @media (max-width: 480px) {
   .sticky-nav .sticky-logo {
-    font-size: 26px;
+    font-size: 28px;
   }
   .mobile-logo-bar .logo-text {
-    font-size: 26px;
+    font-size: 28px;
   }
   .site-header-top .logo-text {
     font-size: 20px;
