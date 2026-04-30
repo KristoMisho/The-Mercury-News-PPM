@@ -255,10 +255,10 @@ nav.main-nav {
 
 .nav-list {
   display: flex;
-  margin: 0px 150px 5px 200px;
+  margin: 0px clamp(20px, 8vw, 150px) 5px clamp(20px, 10vw, 200px);
   justify-content: space-between;
   align-items: center;
-  padding: 0px 80px;
+  padding: 0px clamp(10px, 4vw, 80px);
 }
 
 .nav-list li {
